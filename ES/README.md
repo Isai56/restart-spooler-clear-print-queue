@@ -14,7 +14,7 @@ Detiene el servicio de impresión, elimina los trabajos en cola y reinicia los s
 
 ## 🖥️ Uso
 
-1. Haz clic derecho sobre `ReiniciarSpooler_LimpiarCola.bat`.
+1. Haz clic derecho sobre `restart-spooler-clear-queue.bat`.
 2. Selecciona **Ejecutar como administrador**.
 3. El script limpiará la cola de impresión y reiniciará los servicios necesarios.
 4. Al finalizar, mostrará un resumen del estado.
@@ -31,7 +31,7 @@ Detiene el servicio de impresión, elimina los trabajos en cola y reinicia los s
 
 ## 📄 Archivo incluido
 
-- `ReiniciarSpooler_LimpiarCola.bat`: Script principal.
+- `restart-spooler-clear-queue.bat`: Script principal.
 
 ## 📜 Licencia
 
