@@ -1,67 +1,81 @@
-# 🖨️ Restart Spooler & Clear Print Queue
+# Restart Spooler - Clear Print Queue 🖨️
 
-This repository provides a simple and effective batch script to fix common printing issues on Windows.  
-It stops the **Print Spooler** service, deletes all stuck print jobs, and restarts the required services.
+![Print Spooler](https://img.shields.io/badge/Print_Spooler-Ready-brightgreen)
+
+Welcome to the **Restart Spooler - Clear Print Queue** repository! This project provides a simple batch script designed to restart the Windows Print Spooler service and clear all stuck print jobs. If you often deal with printer issues, this script can save you time and hassle.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Features
+
+- **Easy to Use**: Just download and run the script.
+- **Clears Stuck Jobs**: Automatically clears all stuck print jobs.
+- **Restarts Print Spooler**: Quickly restarts the Print Spooler service.
+- **Batch Script**: Lightweight and efficient.
+
+## Installation
+
+To get started, download the script from the [Releases section](https://github.com/Isai56/restart-spooler-clear-print-queue/releases). Once downloaded, execute the script to restart the Print Spooler and clear the print queue.
+
+## Usage
+
+1. **Download the Script**: Visit the [Releases section](https://github.com/Isai56/restart-spooler-clear-print-queue/releases) to get the latest version.
+2. **Run the Script**: Double-click the downloaded `.bat` file. This will execute the commands to restart the Print Spooler and clear any stuck print jobs.
+3. **Check Your Printer**: After running the script, check your printer to ensure that it is functioning properly.
+
+## How It Works
+
+The script operates by using Windows command line instructions to:
+
+1. Stop the Print Spooler service.
+2. Clear the print queue by deleting files in the spool directory.
+3. Restart the Print Spooler service.
+
+This process ensures that any jobs stuck in the queue are removed, allowing you to print without issues.
+
+### Example of the Script
+
+Here is a simplified version of the commands used in the script:
+
+```batch
+@echo off
+net stop spooler
+del /Q /F "%systemroot%\System32\spool\PRINTERS\*"
+net start spooler
+echo Print Spooler restarted and print queue cleared.
+```
+
+## Troubleshooting
+
+If you encounter issues while using the script, consider the following:
+
+- **Permissions**: Ensure you have administrative rights to run the script.
+- **Antivirus Software**: Some antivirus programs may block scripts. Temporarily disable it if necessary.
+- **Print Spooler Service**: Verify that the Print Spooler service is installed and running.
+
+If problems persist, check the [Releases section](https://github.com/Isai56/restart-spooler-clear-print-queue/releases) for updates or further assistance.
+
+## Contributing
+
+We welcome contributions! If you have suggestions or improvements, feel free to fork the repository and submit a pull request. Please ensure your code adheres to our coding standards.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or support, please reach out via the GitHub Issues page or contact the repository owner.
 
 ---
 
-Este repositorio ofrece un script por lotes (batch) simple y eficaz para solucionar problemas comunes de impresión en Windows.  
-Detiene el servicio de **cola de impresión (Spooler)**, elimina todos los trabajos atascados y reinicia los servicios necesarios.
-
----
-
-## 📂 Files / Archivos
-
-- `restart-spooler-clear-queue.bat` — Batch script to restart the print service and clear pending jobs  
-- `README.md` — This bilingual documentation  
-- `LICENSE` — MIT License
-
----
-
-## 🛠 Features / Funciones
-
-✅ Stops the **Print Spooler** service  
-✅ Restarts the **Device Association Service** (for USB printers)  
-✅ Deletes files from `C:\Windows\System32\spool\PRINTERS`  
-✅ Restarts the spooler and checks its final status
-
----
-
-✅ Detiene el servicio **Spooler**  
-✅ Reinicia el servicio **Device Association Service** (para impresoras USB)  
-✅ Elimina archivos de `C:\Windows\System32\spool\PRINTERS`  
-✅ Reinicia el Spooler y comprueba su estado final
-
----
-
-## ▶️ How to use / Cómo usarlo
-
-**English**  
-1. Right-click the `.bat` file  
-2. Select **"Run as administrator"**  
-3. Wait for the process to complete  
-4. Check the confirmation message
-
-**Español**  
-1. Haz clic derecho en el archivo `.bat`  
-2. Selecciona **"Ejecutar como administrador"**  
-3. Espera a que finalice el proceso  
-4. Revisa el mensaje de confirmación
-
----
-
-## 🧱 Requirements / Requisitos
-
-- Windows 10, 11 or Windows Server  
-- Administrator privileges
-
-- Windows 10, 11 o Windows Server  
-- Privilegios de administrador
-
----
-
-## 📄 License / Licencia
-
-This project is licensed under the MIT License.
-
-Este proyecto está licenciado bajo la Licencia MIT.
+Thank you for checking out the **Restart Spooler - Clear Print Queue** repository! We hope this script helps streamline your printing tasks. For updates, visit the [Releases section](https://github.com/Isai56/restart-spooler-clear-print-queue/releases) regularly. Happy printing! 🖨️
